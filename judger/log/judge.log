@@ -1,0 +1,28 @@
+[Sat Jul  2 11:43:05 2022] 
+hello!
+/opt/uoj/judger/judge_client:364: DeprecationWarning: isAlive() is deprecated, use is_alive() instead
+  if not socket_server_thread.isAlive():
+[Sat Jul  2 11:43:25 2022] 
+hello!
+/opt/uoj/judger/judge_client:364: DeprecationWarning: isAlive() is deprecated, use is_alive() instead
+  if not socket_server_thread.isAlive():
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/uoj/judger/judge_client", line 65, in socket_server_loop
+    s.bind(('', jconf['socket_port']))
+OSError: [Errno 98] Address already in use
+[Sat Jul  2 11:43:27 2022] 
+Traceback (most recent call last):
+  File "/opt/uoj/judger/judge_client", line 432, in <module>
+    main()
+  File "/opt/uoj/judger/judge_client", line 402, in main
+    start_judger_server()
+  File "/opt/uoj/judger/judge_client", line 101, in start_judger_server
+    judger_loop()
+  File "/opt/uoj/judger/judge_client", line 365, in judger_loop
+    raise Exception('socket server exited unexpectedly')
+Exception: socket server exited unexpectedly
